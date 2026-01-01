@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Time Directions Agent - Project Description</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 40px;
+            color: #333;
+        }
+        h1 {
+            color: #2c3e50;
+            text-align: center;
+            border-bottom: 3px solid #3498db;
+            padding-bottom: 10px;
+        }
+        h2 {
+            color: #34495e;
+            margin-top: 30px;
+            border-left: 4px solid #3498db;
+            padding-left: 10px;
+        }
+        h3 {
+            color: #7f8c8d;
+            margin-top: 20px;
+        }
+        ul {
+            margin-left: 20px;
+        }
+        li {
+            margin-bottom: 5px;
+        }
+        .code {
+            background-color: #f8f9fa;
+            padding: 15px;
+            border-left: 4px solid #28a745;
+            font-family: 'Courier New', monospace;
+            white-space: pre-wrap;
+        }
+        .highlight {
+            background-color: #e8f4f8;
+            padding: 15px;
+            border-left: 4px solid #17a2b8;
+            margin: 15px 0;
+        }
+    </style>
+</head>
+<body>
+    <h1>Weather Time Directions Agent - Project Description</h1>
+
+    <h2>Project Overview</h2>
+    <p>The <strong>Weather Time Directions Agent</strong> is a production-ready Streamlit application featuring an intelligent AI agent that provides real-time weather information, accurate time data, and directions between cities using Google's Gemini AI and external APIs.</p>
+
+    <h2>Key Features</h2>
+
+    <h3>🤖 Intelligent Agent Capabilities:</h3>
+    <ul>
+        <li><strong>Real-time Weather:</strong> Current weather conditions for any city worldwide using OpenWeatherMap API</li>
+        <li><strong>Accurate Time:</strong> Current time with proper timezone handling using TimeZoneDB API</li>
+        <li><strong>City Directions:</strong> Route planning and navigation using Google Maps Platform</li>
+        <li><strong>AI Conversations:</strong> Powered by Google's Gemini 2.0 Flash LLM</li>
+    </ul>
+
+    <h3>🏗️ Production Architecture:</h3>
+    <ul>
+        <li><strong>Modular Design:</strong> Clean separation of concerns with dedicated service layers</li>
+        <li><strong>Configuration Management:</strong> Environment-based config with validation</li>
+        <li><strong>Error Handling:</strong> Comprehensive error handling and graceful degradation</li>
+        <li><strong>Testing Framework:</strong> Unit tests for core functionality</li>
+        <li><strong>Documentation:</strong> Complete setup and deployment guides</li>
+    </ul>
+
+    <h3>📊 Monitoring & Observability:</h3>
+    <ul>
+        <li><strong>Opik Integration:</strong> Full tracing and monitoring of agent behavior</li>
+        <li><strong>Logging:</strong> Comprehensive logging throughout the application</li>
+        <li><strong>Performance Tracking:</strong> Request/response monitoring and analytics</li>
+    </ul>
+
+    <h2>Technical Stack</h2>
+
+    <h3>Core Dependencies:</h3>
+    <ul>
+        <li><code>streamlit==1.40.0</code> - Web application framework</li>
+        <li><code>google-adk==1.1.1</code> - Google Agent Development Kit</li>
+        <li><code>opik==1.7.28</code> - AI observability platform</li>
+        <li><code>python-dotenv==1.0.0</code> - Environment variable management</li>
+        <li><code>requests==2.31.0</code> - HTTP client for API calls</li>
+        <li><code>pytz==2024.1</code> - Timezone handling</li>
+    </ul>
+
+    <h3>External APIs:</h3>
+    <ul>
+        <li><strong>Google AI Studio</strong> - Gemini 2.0 Flash LLM</li>
+        <li><strong>Google Maps Platform</strong> - Directions and routing</li>
+        <li><strong>OpenWeatherMap</strong> - Real-time weather data</li>
+        <li><strong>TimeZoneDB</strong> - Accurate timezone information</li>
+        <li><strong>Opik</strong> - Application monitoring and analytics</li>
+    </ul>
+
+    <h2>Project Structure</h2>
+    <div class="code">weather-agent/
+├── app/app.py                    # Main Streamlit application
+├── src/                         # Core application code
+│   ├── agent.py                 # Agent implementation
+│   ├── config.py                # Configuration management
+│   ├── weather_service.py       # Weather API integration
+│   └── time_service.py          # Time API integration
+├── tests/                       # Unit tests
+├── docs/                        # Documentation
+├── .streamlit/config.toml       # Streamlit configuration
+├── requirements.txt             # Production dependencies
+├── requirements-dev.txt         # Development dependencies
+├── run_local.py                 # Local development runner
+├── .env.example                 # Environment template
+└── README.md                    # This file</div>
+
+    <h2>Deployment Options</h2>
+
+    <h3>Streamlit Cloud (Recommended):</h3>
+    <ul>
+        <li>One-click deployment to Streamlit Community Cloud</li>
+        <li>Automatic scaling and hosting</li>
+        <li>Built-in secrets management</li>
+        <li>Live at share.streamlit.io</li>
+    </ul>
+
+    <h3>Local Development:</h3>
+    <ul>
+        <li>Run with <code>python run_local.py</code></li>
+        <li>Full development environment</li>
+        <li>Hot reload capabilities</li>
+        <li>Local debugging and testing</li>
+    </ul>
+
+    <h2>Configuration Requirements</h2>
+
+    <h3>Required API Keys:</h3>
+    <ul>
+        <li><strong>Google AI API key</strong> (for Gemini LLM)</li>
+        <li><strong>Google Maps Platform key</strong> (for directions)</li>
+        <li><strong>Opik API key</strong> (for monitoring)</li>
+        <li><strong>OpenWeatherMap key</strong> (for weather data)</li>
+        <li><strong>TimeZoneDB key</strong> (for timezone data)</li>
+    </ul>
+
+    <div class="highlight">
+    <strong>Environment Setup:</strong><br>
+    Copy <code>.env.example</code> to <code>.env</code> and fill in your API keys.
+    </div>
+
+    <h2>Use Cases</h2>
+    <p>This project serves as:</p>
+    <ol>
+        <li><strong>Learning Template:</strong> Complete example of modern AI application development</li>
+        <li><strong>Production Starter:</strong> Ready-to-deploy application foundation</li>
+        <li><strong>API Integration Showcase:</strong> Demonstrates multiple external service integrations</li>
+        <li><strong>Best Practices Example:</strong> Shows clean architecture, testing, and documentation</li>
+    </ol>
+
+    <h2>Development Status</h2>
+
+    <h3>✅ Completed:</h3>
+    <ul>
+        <li>Full application architecture</li>
+        <li>All core functionality implemented</li>
+        <li>Production-ready deployment configuration</li>
+        <li>Comprehensive documentation</li>
+        <li>Unit testing framework</li>
+        <li>Error handling and logging</li>
+    </ul>
+
+    <h3>🎯 Ready for:</h3>
+    <ul>
+        <li>Local development and testing</li>
+        <li>Cloud deployment</li>
+        <li>API key configuration</li>
+        <li>Production use</li>
+    </ul>
+
+    <div class="highlight">
+    <strong>🎉 Project Status:</strong> This is a complete, production-ready AI application that can be immediately deployed and extended for various use cases requiring intelligent agent capabilities with real-world data integration.
+    </div>
+</body>
+</html>
