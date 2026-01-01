@@ -1,8 +1,8 @@
-# 🌤️ Weather Time Directions Agent
+# Weather Time Directions Agent
 
 A production-ready Streamlit application featuring an intelligent agent that provides real-time weather information, accurate time data, and directions between cities using Google's Gemini AI and external APIs.
 
-## ✨ Features
+## Features
 
 - **Real-time Weather**: Get current weather conditions for any city worldwide
 - **Accurate Time**: Display current time with proper timezone handling
@@ -11,7 +11,7 @@ A production-ready Streamlit application featuring an intelligent agent that pro
 - **Monitoring**: Full observability with Opik integration
 - **Production Ready**: Deployable to Streamlit Cloud Community
 
-## 🚀 Quick Start
+## Quick Start
 
 ### Local Development
 
@@ -28,8 +28,7 @@ A production-ready Streamlit application featuring an intelligent agent that pro
 
 3. **Configure environment**:
    ```bash
-   cp .env.example .env
-   # Edit .env with your API keys
+   # Create a .env file and add your API keys
    ```
 
 4. **Run locally**:
@@ -57,7 +56,7 @@ A production-ready Streamlit application featuring an intelligent agent that pro
    OPIK_PROJECT_NAME = "weather-agent"
    ```
 
-## 🔧 Configuration
+## Configuration
 
 ### Required API Keys
 
@@ -74,7 +73,7 @@ A production-ready Streamlit application featuring an intelligent agent that pro
 - `OPIK_WORKSPACE`: Your Opik workspace name
 - `OPIK_PROJECT_NAME`: Project name for tracking (default: "weather-agent")
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 weather-agent/
@@ -95,11 +94,10 @@ weather-agent/
 ├── requirements.txt             # Production dependencies
 ├── requirements-dev.txt         # Development dependencies
 ├── run_local.py                 # Local development runner
-├── .env.example                 # Environment template
 └── README.md                    # This file
 ```
 
-## 🧪 Testing
+## Testing
 
 Run the test suite:
 
@@ -108,7 +106,7 @@ pip install -r requirements-dev.txt
 pytest
 ```
 
-## 📚 API Documentation
+## API Documentation
 
 ### Weather Service
 
@@ -143,7 +141,7 @@ response = weather_agent.run("What's the weather in Tokyo?")
 print(response)
 ```
 
-## 🚢 Deployment Options
+## Deployment Options
 
 ### Streamlit Cloud (Recommended)
 
@@ -177,7 +175,7 @@ EXPOSE 8501
 CMD ["streamlit", "run", "app/app.py"]
 ```
 
-## 🤝 Contributing
+## Contributing
 
 1. Fork the repository
 2. Create a feature branch: `git checkout -b feature/amazing-feature`
@@ -185,11 +183,11 @@ CMD ["streamlit", "run", "app/app.py"]
 4. Push to branch: `git push origin feature/amazing-feature`
 5. Open a Pull Request
 
-## 📄 License
+## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-## 🙏 Acknowledgments
+## Acknowledgments
 
 - [Google ADK](https://github.com/google/agent-dev-kit) - Agent Development Kit
 - [Opik](https://github.com/comet-ml/opik) - AI Observability Platform
