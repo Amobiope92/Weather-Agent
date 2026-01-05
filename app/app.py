@@ -103,7 +103,7 @@ def display_chat_interface():
         with st.chat_message("assistant"):
             with st.spinner("Thinking..."):
                 try:
-                    response = weather_agent.run(prompt)
+                    response = weather_agent.invoke(prompt)
                     # Extract the response text
                     if hasattr(response, 'text'):
                         response_text = response.text
