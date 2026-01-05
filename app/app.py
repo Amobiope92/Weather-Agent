@@ -103,9 +103,7 @@ def display_chat_interface():
         with st.chat_message("assistant"):
             with st.spinner("Thinking..."):
                 try:
-                    from google.adk.runners import Runner
-                    runner = Runner(agent=weather_agent)
-                    response = runner.run(prompt)
+                    response = weather_agent.run_live(prompt)
                     # Extract the response text
                     if hasattr(response, 'text'):
                         response_text = response.text
